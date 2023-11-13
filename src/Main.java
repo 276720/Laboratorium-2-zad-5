@@ -75,7 +75,7 @@ public class Main extends JFrame{
     public static void messenge(){
         if (buttonClicked == 3) {
             JOptionPane.showMessageDialog(null,
-                    "Poprawnych odpowiedziej: " + poprawnaodpowiedz);
+                    "Poprawnych odpowiedzi: " + poprawnaodpowiedz);
         }
     }
 
@@ -83,7 +83,12 @@ public class Main extends JFrame{
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Main();
+                try {
+                    Main test = new Main();
+                    test.setVisible(true);
+                } catch (Exception e ) {
+                    e.printStackTrace(System.err);
+                }
             }
         });
     }
