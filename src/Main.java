@@ -6,26 +6,7 @@ public class Main extends JFrame{
     private JTextField answearTextField1,answearTextField2,answearTextField3;
     private JButton button1,button2,button3;
     private JPanel panel;
-    private static int poprawnaodpowiedz = 0;
-    private static int buttonClicked = 0;
-
-    public static int getButtonClicked() {
-        return buttonClicked;
-    }
-
-    public static void incrementButtonClicked() {
-        buttonClicked++;
-    }
-
-    public static int getPoprawnaodpowiedz(){
-        return poprawnaodpowiedz;
-    }
-
-    public static void incrementPoprawnaOdpowiedz() {
-       poprawnaodpowiedz++;
-    }
-
-
+    
     public Main() {
         super("Zadanie 5");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -70,13 +51,6 @@ public class Main extends JFrame{
         setSize(300, 300);
         setLocationRelativeTo(null);
         setVisible(true);
-    }
-
-    public static void messenge(){
-        if (buttonClicked == 3) {
-            JOptionPane.showMessageDialog(null,
-                    "Poprawnych odpowiedzi: " + poprawnaodpowiedz);
-        }
     }
 
     public static void main(String[] args) {

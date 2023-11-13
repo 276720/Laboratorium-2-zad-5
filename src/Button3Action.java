@@ -10,13 +10,13 @@ public class Button3Action implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        Main.incrementButtonClicked();
-        int buttonClicked = Main.getButtonClicked();
+        Messenge.incrementButtonClicked();
+        int buttonClicked = Messenge.getButtonClicked();
         JButton btn3 = (JButton) e.getSource();
         if(answearTextField3.getText().equalsIgnoreCase("Martynenka")){
             btn3.setEnabled(false);
-            Main.incrementPoprawnaOdpowiedz();
-            int poprawnaodpowiedz = Main.getPoprawnaodpowiedz();
+            Messenge.incrementPoprawnaOdpowiedz();
+            int poprawnaodpowiedz = Messenge.getPoprawnaodpowiedz();
             JOptionPane.showMessageDialog(null,
                     "Odpowiedż poprawna ");
         }
@@ -25,6 +25,6 @@ public class Button3Action implements ActionListener {
             JOptionPane.showMessageDialog(null,
                     "Niepoprawna odpowiedż ");
         }
-        Main.messenge();
+        Messenge.messenge();
     }
 }

@@ -10,13 +10,13 @@ public class Button1Action implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        Main.incrementButtonClicked();
-        int buttonClicked = Main.getButtonClicked();
+        Messenge.incrementButtonClicked();
+        int buttonClicked = Messenge.getButtonClicked();
         JButton btn1 = (JButton) e.getSource();
         if(answearTextField1.getText().equalsIgnoreCase("Warszawa")){
             btn1.setEnabled(false);
-            Main.incrementPoprawnaOdpowiedz();
-            int poprawnaodpowiedz = Main.getPoprawnaodpowiedz();
+            Messenge.incrementPoprawnaOdpowiedz();
+            int poprawnaodpowiedz = Messenge.getPoprawnaodpowiedz();
             JOptionPane.showMessageDialog(null,
                     "Odpowiedż poprawna ");
         }
@@ -25,6 +25,6 @@ public class Button1Action implements ActionListener {
             JOptionPane.showMessageDialog(null,
                     "Niepoprawna odpowiedż ");
         }
-        Main.messenge();
+        Messenge.messenge();
     }
 }

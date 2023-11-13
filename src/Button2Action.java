@@ -10,13 +10,13 @@ public class Button2Action implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        Main.incrementButtonClicked();
-        int buttonClicked = Main.getButtonClicked();
+        Messenge.incrementButtonClicked();
+        int buttonClicked = Messenge.getButtonClicked();
         JButton btn2 = (JButton) e.getSource();
         if(answearTextField2.getText().equalsIgnoreCase("10000")){
             btn2.setEnabled(false);
-            Main.incrementPoprawnaOdpowiedz();
-            int poprawnaodpowiedz = Main.getPoprawnaodpowiedz();
+            Messenge.incrementPoprawnaOdpowiedz();
+            int poprawnaodpowiedz = Messenge.getPoprawnaodpowiedz();
             JOptionPane.showMessageDialog(null,
                     "Odpowiedż poprawna ");
         }
@@ -26,6 +26,6 @@ public class Button2Action implements ActionListener {
                     "Niepoprawna odpowiedż ");
         }
 
-        Main.messenge();
+        Messenge.messenge();
     }
 }
